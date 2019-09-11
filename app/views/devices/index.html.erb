@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1><center>Organization Device Tracker</center></h1>
+<br>
+
+<table align="center" border: 1px solid black>
+  <thead>
+    <tr>
+      <th>Device ID</th>
+      <th>Staff ID</th>
+      <th>Operating System</th>
+      <th>CPU</th>
+      <th>RAM</th>
+      <th>Model</th>
+      <th colspan="4">Options</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @devices.each do |device| %>
+      <tr>
+        <td><%= device.id %></td>
+        <td><%= device.staffId %></td>
+        <td><%= device.OS %></td>
+        <td><%= device.CPU %></td>
+        <td><%= device.RAM %></td>
+        <td><%= device.Model %></td>
+        <td>Add Device Note</td>
+        <td><%= link_to 'Show Device Notes', device %></td>
+        <td><%= link_to 'Edit Device', edit_device_path(device) %></td>
+        <td><%= link_to 'Delete Device', device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<h1>
+<%= link_to 'Add New Device', new_device_path %>
+</h1>
