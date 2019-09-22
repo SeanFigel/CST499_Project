@@ -12,6 +12,7 @@ RSpec.describe DevicesController, type: :routing do
 
     it "routes to #show" do
       expect(:get => "/devices/1").to route_to("devices#show", :id => "1")
+
     end
 
     it "routes to #edit" do
