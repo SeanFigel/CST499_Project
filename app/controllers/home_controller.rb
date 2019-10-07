@@ -12,6 +12,11 @@ before_action :set_device, only: [:show, :edit, :update, :destroy]
   def show
   end
 
+  #method for the redirect route
+  def viewHome
+  end
+
+
   # GET /devices/new
   def new
     @device = Device.new
