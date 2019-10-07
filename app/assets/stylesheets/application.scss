@@ -1,0 +1,88 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_reset
+ *= require_flexboxgrid
+ *= require_tree .
+ *= require_self
+ *= require_custom
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+ 
+html {
+  min-height: 100%;
+}
+
+body {
+    background: linear-gradient(to bottom, #FBC500, #334501);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #0D00FF;
+    min-height: 100vh;
+} 
+
+footer {
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+ 
+}
+
+/* unvisited link */
+a:link {
+  color: white;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+}
+
+/* mouse over link */
+ a:hover {
+  background-color: #9FADF1 ;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+
+h1{
+    text-align: center;
+}
+
+.login_format{
+    text-align: right;
+}
+
+
+.top-buffer{
+    margin-top: 20px;
+}
+
+.label-info{
+    font-size: 20px;
+}
+
+.label-default{
+    font-size: 30px;
+}
+
+.label-default + .label-default{
+    margin-left: 10px;
+}
+
+
+
