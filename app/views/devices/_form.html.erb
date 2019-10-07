@@ -1,3 +1,4 @@
+<div class="container">
 <%= form_for(device) do |f| %>
   <% if device.errors.any? %>
     <div id="error_explanation">
@@ -10,33 +11,63 @@
       </ul>
     </div>
   <% end %>
-
+<div class="row">
   <div class="field">
-    <%= f.label :staffId %>
-    <%= f.number_field :staffId %>
+    <div class="col-md-1">
+      <%= f.label :staffId, "Staff Id" %>
+    </div>
+    <div class="col-md-11">
+      <%= f.number_field :staffId %>
+    </div>
   </div>
+</div>
 
+<div class="row">
+    <div class="field">
+      <div class="col-md-1">
+        <%= f.label :OS %>
+      </div>
+      <div class="col-md-11">
+        <%= f.text_field :OS %>
+      </div>  
+    </div>
+</div> 
+
+<div class="row">
   <div class="field">
-    <%= f.label :OS %>
-    <%= f.text_field :OS %>
+    <div class="col-md-1">
+      <%= f.label :CPU %>
+    </div>
+    <div class="col-md-11">
+      <%= f.text_field :CPU %>
+    </div>
   </div>
+</div> 
 
+<div class="row">
   <div class="field">
-    <%= f.label :CPU %>
-    <%= f.text_field :CPU %>
+    <div class="col-md-1">
+      <%= f.label :RAM %>
+    </div>
+    <div class="col-md-11">
+      <%= f.number_field :RAM %>
+    </div>
   </div>
+</div>
 
+<div class="row">
   <div class="field">
-    <%= f.label :RAM %>
-    <%= f.number_field :RAM %>
+    <div class="col-md-1">
+      <%= f.label :Model %>
+    </div>
+    <div class="col-md-11">
+      <%= f.text_field :Model %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :Model %>
-    <%= f.text_field :Model %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+</div>
+  
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>
+</div>

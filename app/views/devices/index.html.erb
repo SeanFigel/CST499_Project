@@ -1,12 +1,12 @@
-<% if current_user %>
-  Logged in as <%= current_user.email %>.
-  <%= link_to "Log Out", logout_path %>
-  <p id="notice"><%= notice %></p>
 
-<h1><center>Organization Device Tracker</center></h1>
+<div class="login_format"><% if current_user %>
+  Logged in as <%= current_user.email %>.
+    <%= link_to "Log Out", logout_path %></div>
+
+<h1>Organization Device Tracker</h1>
 <br>
 
-<table align="center" border: 1px solid black>
+<table class="table">
   <thead>
     <tr>
       <th>Device ID</th>
