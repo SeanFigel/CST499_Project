@@ -19,7 +19,6 @@
         <td><%= employee.firstName %></td>
         <td><%= employee.lastName %></td>
         <td><%= employee.role %></td>
-        <td><%= link_to 'Show', employee %></td>
         <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
         <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -29,5 +28,6 @@
 
 <br>
 
-<%= link_to 'New Employee', new_employee_path %>
-<%= link_to 'Devices', viewHome_path %>
+<%= link_to 'New Employee', new_employee_path %> | 
+<%= link_to 'Home', viewHome_path %> | 
+<%= link_to 'Device Notes', showdeviceNotes_path %>

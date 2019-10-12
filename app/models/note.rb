@@ -1,3 +1,3 @@
 class Note < ApplicationRecord
-    belongs_to :devices
+    belongs_to :devices, optional: true
 end

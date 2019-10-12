@@ -4,6 +4,13 @@
   <%= link_to "Log Out", logout_path %>
   <p id="notice"><%= notice %></p>
 
+<h1>
+<%= link_to 'Employees', showEmployee_path %>
+</h1>
+<h1>
+<%= link_to 'Device Notes' , showdeviceNotes_path %>
+</h1>
+
 <h1><center>Organization Device Tracker</center></h1>
 <br>
 
@@ -29,8 +36,9 @@
         <td><%= device.CPU %></td>
         <td><%= device.RAM %></td>
         <td><%= device.Model %></td>
-        <td>Add Device Note</td>
-        <td><%= link_to 'Show Device Notes', device %></td>
+        <td><%= link_to 'Add Device Notes', deviceNotes_path %></td>
+        <td><%= link_to 'Show Device Notes', showdeviceNotes_path %></td>
+        <td><%= link_to 'Show Device Details', device %></td>
         <td><%= link_to 'Edit Device', edit_device_path(device) %></td>
         <td><%= link_to 'Delete Device', device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -43,6 +51,7 @@
 <h1>
 <%= link_to 'Add New Device', new_device_path %>
 </h1>
+
   
 <% else %>
   <%= link_to "Sign Up", signup_path %> or 
