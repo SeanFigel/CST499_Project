@@ -1,13 +1,18 @@
+<nav class="navbar">
+  <%= link_to 'Home', devices_path %> | 
+  <%= link_to 'Employees', showEmployee_path %>
+</nav>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Notes</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Deviceid</th>
       <th>Description</th>
-      <th colspan="3"></th>
+      <th colspan="3">Options</th>
     </tr>
   </thead>
 
@@ -26,6 +31,4 @@
 
 <br>
 
-<%= link_to 'New Note', new_note_path %> |
-<%= link_to 'Home', devices_path %> | 
-<%= link_to 'Employees', showEmployee_path %>
+<%= link_to 'New Note', new_note_path %> 

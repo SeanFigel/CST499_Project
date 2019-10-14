@@ -1,3 +1,4 @@
+<div class="container">
 <%= form_for(note) do |f| %>
   <% if note.errors.any? %>
     <div id="error_explanation">
@@ -10,18 +11,28 @@
       </ul>
     </div>
   <% end %>
-
+<div class="row">
   <div class="field">
+    <div class="col-md-1">
     <%= f.label :deviceID %>
+    </div>
+    <div class="col-md-11">
     <%= f.number_field :deviceID %>
+    </div>
   </div>
-
+</div>
+<div class="row">
   <div class="field">
+    <div class="col-md-1">
     <%= f.label :description %>
+    </div>
+    <div class="col-md-11">
     <%= f.text_area :description %>
+    </div>
   </div>
-
+</div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+</div>

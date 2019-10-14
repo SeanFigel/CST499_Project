@@ -1,3 +1,4 @@
+<div class="container">
 <%= form_for(employee) do |f| %>
   <% if employee.errors.any? %>
     <div id="error_explanation">
@@ -10,23 +11,38 @@
       </ul>
     </div>
   <% end %>
-
+<div class="row">
   <div class="field">
+    <div class="col-md-1">
     <%= f.label :"First name" %>
+    </div>
+    <div class="col-md-11">
     <%= f.text_field :firstName %>
+    </div>
   </div>
-
+</div>
+<div class="row">
   <div class="field">
+    <div class="col-md-1">
     <%= f.label :"Last name" %>
+    </div>
+    <div class="col-md-11">
     <%= f.text_field :lastName %>
+    </div>
   </div>
-
+</div>
+<div class="row">
   <div class="field">
+    <div class="col-md-1">
     <%= f.label :role %>
+    </div>
+    <div class="col-md-11">
     <%= f.text_field :role %>
+    </div>
   </div>
-
+</div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+</div>

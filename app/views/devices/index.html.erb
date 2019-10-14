@@ -1,14 +1,15 @@
-
-<div class="login_format"><% if current_user %>
-  Logged in as <%= current_user.email %>.
-    <%= link_to "Log Out", logout_path %></div>
-
-<h1>
-<%= link_to 'Employees', showEmployee_path %>
-</h1>
-<h1>
-<%= link_to 'Device Notes' , showdeviceNotes_path %>
-</h1>
+<% if current_user %>
+<nav class="nav navbar">
+  <ul class="navbar-nav">
+      <%= link_to 'Employees', showEmployee_path %>
+      <%= link_to 'Device Notes' , showdeviceNotes_path %>
+ </ul>
+  <ul class="navbar-right">  
+    
+    Logged in as <%= current_user.email %>.
+    <%= link_to "Log Out", logout_path %>
+  </ul>
+</nav>
 
 <h1>Organization Device Tracker</h1>
 <br>
@@ -22,7 +23,7 @@
       <th>CPU</th>
       <th>RAM</th>
       <th>Model</th>
-      <th colspan="4">Options</th>
+      <th colspan="5">Options</th>
     </tr>
   </thead>
 
@@ -37,7 +38,6 @@
         <td><%= device.Model %></td>
         <td><%= link_to 'Add Device Notes', deviceNotes_path %></td>
         <td><%= link_to 'Show Device Notes', showdeviceNotes_path %></td>
-        <td><%= link_to 'Show Device Details', device %></td>
         <td><%= link_to 'Edit Device', edit_device_path(device) %></td>
         <td><%= link_to 'Delete Device', device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
