@@ -21,13 +21,14 @@
  
 html {
   min-height: 100%;
+  
 }
 
 body {
     background: linear-gradient(to bottom, #37BC00, #7E7D89 );
     background-repeat: no-repeat;
     background-size: cover;
-    color: #0D00FF;
+    color: #000000;
     min-height: 100vh;
 } 
 
@@ -84,5 +85,6 @@ h1{
     margin-left: 10px;
 }
 
-
-
+#notice{
+    color:#000000;
+}
